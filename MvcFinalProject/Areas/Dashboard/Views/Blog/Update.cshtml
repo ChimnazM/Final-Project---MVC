@@ -1,0 +1,49 @@
+﻿
+@model Blog
+@{
+    ViewData["Title"] = "Update";
+}
+
+      <div class="main-panel">        
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Update Layout</h4>
+                  
+                  <form class="forms-sample" method="post" asp-controller="Blog" asp-action="Update" enctype="multipart/form-data">
+                           
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">BlogImage</label>
+                                <input accept="image/*" asp-for="Image" class="form-control" placeholder="BlogImage">
+                                <span asp-validation-for="Image" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">Title</label>
+                                <input accept="image/*" asp-for="Title" class="form-control" placeholder="Title">
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div> 
+                             <div class="form-group">
+                                <label for="exampleInputUsername1">Explanation </label>
+                                <input asp-for="Explanation" class="form-control" placeholder="Explanation">
+                                <span asp-validation-for="Explanation" class="text-danger"></span>
+                            </div>
+                             <div class="form-group">
+                                <label for="exampleInputUsername1">Description</label>
+                                <input asp-for="Description" class="form-control" placeholder="Description">
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            
+                               
+
+                            <button type="submit" class="btn btn-primary me-2"> Submit</button>
+                            <a class="btn btn-light" asp-action="Index">Cancel</a>
+                        </form>
+                </div>
+              </div>
+             </div>
+           </div>
+          </div>
+         </div>
+

@@ -1,0 +1,59 @@
+﻿
+
+
+@model Teacher
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="main-panel">        
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body" style="background-color: #B2BABB">
+                  <ul>
+                      <li>
+                      MainImage:<br>
+                      <img src="~/Assets/img/teacher/@Model.MainImage" style="width: 200px; border-radius: 0%;" />
+                  </li>
+                  <br><br>
+                  <li>
+                      DetailImage:<br>
+                      <img  src="~/Assets/img/teacher/@Model.DetailImage" style="width: 200px; border-radius: 0%;" />
+                  </li><br><br>
+                  <li>
+                      Fullname: @Model.Fullname
+                  </li>
+                   <li>
+                      Profession: @Model.Profession
+                  </li>
+                   <li>
+                      Title: @Model.Title
+                  </li>
+                   <li>
+                     Description: @Model.Description
+                  </li>
+                   <li>
+                      @foreach (var item in Model.Skill)
+                     {
+                         <li>@item.Value @item.Key</li>
+                     }
+
+                  </li>
+                   <li>
+                      Contact: @Model.Contact.Email @Model.Contact.FacebookUrl @Model.Contact.PhoneNumber
+                  </li>
+                
+                  </ul>
+                  
+                  <a class="btn btn-primary" asp-action="Index">Cancel</a>
+                </div>
+              </div>
+            </div>
+             </div>
+              </div>
+            </div>
+
+
+
